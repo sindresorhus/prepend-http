@@ -1,0 +1,32 @@
+{
+  "name": "prepend-http",
+  "version": "0.0.0",
+  "description": "Prepend http:// to humanized URLs like todomvc.com and localhost",
+  "license": "MIT",
+  "repository": "sindresorhus/prepend-http",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "protocol",
+    "scheme",
+    "url",
+    "uri",
+    "prepend",
+    "http"
+  ],
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
