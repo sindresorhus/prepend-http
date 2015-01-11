@@ -4,7 +4,5 @@ module.exports = function (url) {
 		throw new TypeError('Expected a string');
 	}
 
-	return url.trim()
-		.replace(/^localhost/, 'http://$&')
-		.replace(/^(?!(?:\w+:)?\/\/)/, 'http://');
+	return url.trim().replace(/^(?!(?:\w+:)?\/\/)/, 'http://');
 };
