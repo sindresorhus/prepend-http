@@ -10,5 +10,7 @@ test(function (t) {
 	t.assert(prependHttp('localhost') === 'http://localhost');
 	t.assert(prependHttp('localhost:8000') === 'http://localhost:8000');
 	t.assert(prependHttp('localhost:8000  ') === 'http://localhost:8000');
+	t.assert(prependHttp('./relative') === './relative');
+	t.assert(prependHttp('/relative') === '/relative');
 	t.end();
 });
