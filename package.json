@@ -7,13 +7,13 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "xo && node test.js"
   },
   "files": [
     "index.js"
@@ -24,9 +24,11 @@
     "url",
     "uri",
     "prepend",
-    "http"
+    "http",
+    "https"
   ],
   "devDependencies": {
-    "ava": "0.0.4"
+    "ava": "0.0.4",
+    "xo": "*"
   }
 }
