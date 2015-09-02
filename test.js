@@ -1,17 +1,17 @@
 'use strict';
 var test = require('ava');
-var prependHttp = require('./');
+var fn = require('./');
 
 test(function (t) {
-	t.assert(prependHttp('todomvc.com') === 'http://todomvc.com');
-	t.assert(prependHttp('http://todomvc.com') === 'http://todomvc.com');
-	t.assert(prependHttp('https://todomvc.com') === 'https://todomvc.com');
-	t.assert(prependHttp('//todomvc.com') === '//todomvc.com');
-	t.assert(prependHttp('localhost') === 'http://localhost');
-	t.assert(prependHttp('localhost:8000') === 'http://localhost:8000');
-	t.assert(prependHttp('localhost:8000  ') === 'http://localhost:8000');
-	t.assert(prependHttp('./relative') === './relative');
-	t.assert(prependHttp('../relative') === '../relative');
-	t.assert(prependHttp('/relative') === '/relative');
+	t.is(fn('todomvc.com'), 'http://todomvc.com');
+	t.is(fn('http://todomvc.com'), 'http://todomvc.com');
+	t.is(fn('https://todomvc.com'), 'https://todomvc.com');
+	t.is(fn('//todomvc.com'), '//todomvc.com');
+	t.is(fn('localhost'), 'http://localhost');
+	t.is(fn('localhost:8000'), 'http://localhost:8000');
+	t.is(fn('localhost:8000  '), 'http://localhost:8000');
+	t.is(fn('./relative'), './relative');
+	t.is(fn('../relative'), '../relative');
+	t.is(fn('/relative'), '/relative');
 	t.end();
 });
