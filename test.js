@@ -1,8 +1,7 @@
-'use strict';
-var test = require('ava');
-var fn = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
+test(t => {
 	t.is(fn('todomvc.com'), 'http://todomvc.com');
 	t.is(fn('http://todomvc.com'), 'http://todomvc.com');
 	t.is(fn('https://todomvc.com'), 'https://todomvc.com');
@@ -13,5 +12,4 @@ test(function (t) {
 	t.is(fn('./relative'), './relative');
 	t.is(fn('../relative'), '../relative');
 	t.is(fn('/relative'), '/relative');
-	t.end();
 });
