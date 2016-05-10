@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function (url) {
 	if (typeof url !== 'string') {
-		throw new TypeError('Expected a string');
+		throw new TypeError('Expected a string, got ' + typeof url);
 	}
 
 	url = url.trim();

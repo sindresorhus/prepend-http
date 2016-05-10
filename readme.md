@@ -28,4 +28,4 @@ prependHttp('http://todomvc.com');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
