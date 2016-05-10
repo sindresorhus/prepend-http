@@ -6,7 +6,7 @@ module.exports = function (url) {
 
 	url = url.trim();
 
-	if (/^\.*\//.test(url)) {
+	if (/^\.*\/|^(?!localhost)\w+:/.test(url)) {
 		return url;
 	}
 

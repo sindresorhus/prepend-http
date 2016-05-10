@@ -12,4 +12,6 @@ test(t => {
 	t.is(fn('./relative'), './relative');
 	t.is(fn('../relative'), '../relative');
 	t.is(fn('/relative'), '/relative');
+	t.is(fn('mailto:info@site.com'), 'mailto:info@site.com');
+	t.is(fn('tel:1234567890'), 'tel:1234567890');
 });
