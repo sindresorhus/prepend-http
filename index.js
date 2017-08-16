@@ -6,7 +6,7 @@ module.exports = url => {
 
 	url = url.trim();
 
-	if (/^\.*\/|^(?!localhost)\w+:/.test(url)) {
+	if (/^\.*\/|^(?!localhost)(?!(?!mailto:)\S+(:\S*)?@)\w+:/.test(url)) {
 		return url;
 	}
 
