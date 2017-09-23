@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save prepend-http
+$ npm install prepend-http
 ```
 
 
