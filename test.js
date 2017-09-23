@@ -13,7 +13,11 @@ test('prepend http', t => {
 	t.is(m('../relative'), '../relative');
 	t.is(m('/relative'), '/relative');
 	t.is(m('mailto:info@site.com'), 'mailto:info@site.com');
+	t.is(m('mailto:someone@example.com?Subject=Hello%20again'), 'mailto:someone@example.com?Subject=Hello%20again');
 	t.is(m('tel:1234567890'), 'tel:1234567890');
+	t.is(m('login:password@site.com'), 'http://login:password@site.com');
+	t.is(m('login:password@site.com:1234'), 'http://login:password@site.com:1234');
+	t.is(m('login:password@site.com/path/name'), 'http://login:password@site.com/path/name');
 });
 
 test('https option', t => {

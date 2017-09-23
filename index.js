@@ -7,7 +7,7 @@ module.exports = (url, opts) => {
 	url = url.trim();
 	opts = Object.assign({https: false}, opts);
 
-	if (/^\.*\/|^(?!localhost)\w+:/.test(url)) {
+	if (/^\.*\/|^(?!localhost)(?!(?!mailto:)\S+(:\S*)?@)\w+:/.test(url)) {
 		return url;
 	}
 
