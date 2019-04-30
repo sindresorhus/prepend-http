@@ -41,7 +41,7 @@ URL to prepend `http://` on.
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### https
 
