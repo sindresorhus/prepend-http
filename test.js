@@ -2,13 +2,13 @@ import test from 'ava';
 import prependHttp from '.';
 
 test('prepend http', t => {
-	t.is(prependHttp('todomvc.com'), 'http://todomvc.com');
-	t.is(prependHttp('http://todomvc.com'), 'http://todomvc.com');
-	t.is(prependHttp('https://todomvc.com'), 'https://todomvc.com');
-	t.is(prependHttp('//todomvc.com'), '//todomvc.com');
-	t.is(prependHttp('localhost'), 'http://localhost');
-	t.is(prependHttp('localhost:8000'), 'http://localhost:8000');
-	t.is(prependHttp('localhost:8000  '), 'http://localhost:8000');
+	t.is(prependHttp('todomvc.com', {https: false}), 'http://todomvc.com');
+	t.is(prependHttp('http://todomvc.com', {https: false}), 'http://todomvc.com');
+	t.is(prependHttp('https://todomvc.com', {https: false}), 'https://todomvc.com');
+	t.is(prependHttp('//todomvc.com', {https: false}), '//todomvc.com');
+	t.is(prependHttp('localhost', {https: false}), 'http://localhost');
+	t.is(prependHttp('localhost:8000', {https: false}), 'http://localhost:8000');
+	t.is(prependHttp('localhost:8000  ', {https: false}), 'http://localhost:8000');
 	t.is(prependHttp('./relative'), './relative');
 	t.is(prependHttp('../relative'), '../relative');
 	t.is(prependHttp('/relative'), '/relative');

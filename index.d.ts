@@ -3,7 +3,7 @@ declare namespace prependHttp {
 		/**
 		Prepend `https://` instead of `http://`.
 
-		@default false
+		@default true
 		*/
 		readonly https?: boolean;
 	}

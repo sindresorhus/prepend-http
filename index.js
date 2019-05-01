@@ -7,7 +7,7 @@ module.exports = (url, options) => {
 	url = url.trim();
 
 	options = {
-		https: false,
+		https: true,
 		...options
 	};
 
