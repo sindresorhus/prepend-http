@@ -10,25 +10,22 @@ declare namespace prependHttp {
 }
 
 /**
-Prepend `http://` to humanized URLs like `todomvc.com` and `localhost`.
+Prepend `https://` to humanized URLs like `sindresorhus.com` and `localhost`.
 
-@param url - URL to prepend `http://` to.
+@param url - URL to prepend `https://` to.
 
 @example
 ```
 import prependHttp = require('prepend-http');
 
-prependHttp('todomvc.com');
-//=> 'http://todomvc.com'
+prependHttp('sindresorhus.com');
+//=> 'https://sindresorhus.com'
 
-prependHttp('localhost');
+prependHttp('localhost', {https: false});
 //=> 'http://localhost'
 
-prependHttp('http://todomvc.com');
-//=> 'http://todomvc.com'
-
-prependHttp('todomvc.com', {https: true});
-//=> 'https://todomvc.com'
+prependHttp('https://sindresorhus.com');
+//=> 'https://sindresorhus.com'
 ```
 */
 declare function prependHttp(url: string, options?: prependHttp.Options): string;

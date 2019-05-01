@@ -1,7 +1,7 @@
 {
 	"name": "prepend-http",
 	"version": "3.0.0",
-	"description": "Prepend `http://` to humanized URLs like todomvc.com and localhost",
+	"description": "Prepend `https://` to humanized URLs like sindresorhus.com and localhost",
 	"license": "MIT",
 	"repository": "sindresorhus/prepend-http",
 	"author": {

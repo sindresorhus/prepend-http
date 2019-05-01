@@ -3,5 +3,5 @@ import prependHttp = require('.');
 
 const options: prependHttp.Options = {};
 
-expectType<string>(prependHttp('todomvc.com'));
-expectType<string>(prependHttp('todomvc.com', {https: true}));
+expectType<string>(prependHttp('sindresorhus.com'));
+expectType<string>(prependHttp('sindresorhus.com', {https: false}));
