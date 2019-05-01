@@ -12,7 +12,7 @@ declare namespace prependHttp {
 /**
 Prepend `http://` to humanized URLs like `todomvc.com` and `localhost`.
 
-@param url - URL to prepend `http://` on.
+@param url - URL to prepend `http://` to.
 
 @example
 ```

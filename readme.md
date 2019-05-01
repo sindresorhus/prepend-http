@@ -37,7 +37,7 @@ prependHttp('todomvc.com', {https: true});
 
 Type: `string`
 
-URL to prepend `http://` on.
+URL to prepend `http://` to.
 
 #### options
 

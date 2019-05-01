@@ -5,7 +5,11 @@ module.exports = (url, options) => {
 	}
 
 	url = url.trim();
-	options = {https: false, ...options};
+
+	options = {
+		https: false,
+		...options
+	};
 
 	if (/^\.*\/|^(?!localhost)\w+:/.test(url)) {
 		return url;
