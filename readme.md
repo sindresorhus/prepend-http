@@ -28,7 +28,7 @@ prependHttp('https://sindresorhus.com');
 
 ## API
 
-### prependHttp(url, [options])
+### prependHttp(url, options?)
 
 #### url
 
@@ -48,6 +48,14 @@ Default: `true`
 Prepend `https://` instead of `http://`.
 
 
-## License
+---
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-prepend-http?utm_source=npm-prepend-http&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
