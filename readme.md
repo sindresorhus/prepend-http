@@ -1,4 +1,4 @@
-# prepend-http [![Build Status](https://travis-ci.org/sindresorhus/prepend-http.svg?branch=master)](https://travis-ci.org/sindresorhus/prepend-http)
+# prepend-http
 
 > Prepend `https://` to humanized URLs like `sindresorhus.com` and `localhost`
 
