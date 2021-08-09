@@ -1,19 +1,13 @@
-'use strict';
-module.exports = (url, options) => {
+export default function prependHttp(url, {https = true} = {}) {
 	if (typeof url !== 'string') {
 		throw new TypeError(`Expected \`url\` to be of type \`string\`, got \`${typeof url}\``);
 	}
 
 	url = url.trim();
 
-	options = {
-		https: true,
-		...options
-	};
-
-	if (/^\.*\/|^(?!localhost)\w+:/.test(url)) {
+	if (/^\.*\/|^(?!localhost)\w+?:/.test(url)) {
 		return url;
 	}
 
-	return url.replace(/^(?!(?:\w+:)?\/\/)/, options.https ? 'https://' : 'http://');
-};
+	return url.replace(/^(?!(?:\w+?:)?\/\/)/, https ? 'https://' : 'http://');
+}

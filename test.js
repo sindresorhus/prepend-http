@@ -1,5 +1,5 @@
 import test from 'ava';
-import prependHttp from '.';
+import prependHttp from './index.js';
 
 test('prepend http', t => {
 	t.is(prependHttp('sindresorhus.com', {https: false}), 'http://sindresorhus.com');

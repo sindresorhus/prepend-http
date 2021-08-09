@@ -2,18 +2,16 @@
 
 > Prepend `https://` to humanized URLs like `sindresorhus.com` and `localhost`
 
-
 ## Install
 
 ```
 $ npm install prepend-http
 ```
 
-
 ## Usage
 
 ```js
-const prependHttp = require('prepend-http');
+import prependHttp from 'prepend-http';
 
 prependHttp('sindresorhus.com');
 //=> 'https://sindresorhus.com'
@@ -25,7 +23,6 @@ prependHttp('https://sindresorhus.com');
 //=> 'https://sindresorhus.com'
 ```
 
-
 ## API
 
 ### prependHttp(url, options?)
@@ -34,7 +31,7 @@ prependHttp('https://sindresorhus.com');
 
 Type: `string`
 
-URL to prepend `https://` to.
+The URL to prepend `https://` to.
 
 #### options
 
@@ -42,11 +39,10 @@ Type: `object`
 
 ##### https
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Prepend `https://` instead of `http://`.
-
 
 ---
 

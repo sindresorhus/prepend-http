@@ -1,22 +1,20 @@
-declare namespace prependHttp {
-	interface Options {
-		/**
-		Prepend `https://` instead of `http://`.
+export interface Options {
+	/**
+	Prepend `https://` instead of `http://`.
 
-		@default true
-		*/
-		readonly https?: boolean;
-	}
+	@default true
+	*/
+	readonly https?: boolean;
 }
 
 /**
 Prepend `https://` to humanized URLs like `sindresorhus.com` and `localhost`.
 
-@param url - URL to prepend `https://` to.
+@param url - The URL to prepend `https://` to.
 
 @example
 ```
-import prependHttp = require('prepend-http');
+import prependHttp from 'prepend-http';
 
 prependHttp('sindresorhus.com');
 //=> 'https://sindresorhus.com'
@@ -28,6 +26,4 @@ prependHttp('https://sindresorhus.com');
 //=> 'https://sindresorhus.com'
 ```
 */
-declare function prependHttp(url: string, options?: prependHttp.Options): string;
-
-export = prependHttp;
+export default function prependHttp(url: string, options?: Options): string;
