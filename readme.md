@@ -44,3 +44,6 @@ Default: `true`
 
 Prepend `https://` instead of `http://`.
 
+## Notes
+
+URLs with authentication information (e.g., `login:password@site.com`) are returned unchanged as basic auth in URLs is deprecated and to avoid conflicting with custom schemes.
